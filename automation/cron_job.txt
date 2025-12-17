@@ -1,0 +1,17 @@
+Cron Job Configuration for Pipeline Automation
+
+The following cron job is configured on the EC2 instance to automate
+the execution of the PySpark ETL pipeline.
+
+Schedule:
+- Runs every day at 1:00 AM UTC
+
+Cron Entry:
+0 1 * * * /home/ec2-user/pipeline/scripts/run_pipeline.sh >> /home/ec2-user/pipeline/logs/pipeline.log 2>&1
+
+Description:
+- The cron job triggers the pipeline shell script.
+- The script reads raw data from Amazon S3.
+- PySpark processes and cleans the data.
+- The processed data is written back to Amazon S3.
+- Logs are stored for monitoring and debugging.

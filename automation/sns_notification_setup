@@ -1,0 +1,26 @@
+Amazon SNS Notification Setup
+
+Purpose:
+Amazon SNS is used to notify the user about the status of the pipeline
+execution (success or failure).
+
+Steps:
+1. Created an SNS topic named:
+   telco-churn-pipeline-status
+
+2. Subscribed an email endpoint to the topic.
+
+3. Updated the pipeline shell script to publish messages to SNS
+   after pipeline completion.
+
+Example Notification Messages:
+
+Success Message:
+"Telco churn pipeline executed successfully at $(date)."
+
+Failure Message:
+"Telco churn pipeline failed at $(date). Please check logs."
+
+Integration:
+- SNS notifications are triggered automatically by the pipeline script.
+- This ensures real-time monitoring without manual checks.

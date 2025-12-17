@@ -3,7 +3,7 @@
 ## Overview
 This project implements an end-to-end big data pipeline for customer churn analysis using AWS services and PySpark. The pipeline ingests raw data, performs distributed processing, trains a machine learning model, and visualizes insights through dashboards.
 
----
+
 
 ## Dataset
 - **Type:** Customer Churn Dataset
@@ -11,7 +11,7 @@ This project implements an end-to-end big data pipeline for customer churn analy
 - **Description:** Includes customer demographics, service subscriptions, tenure, billing information, and churn indicators.
 - **Purpose:** Analyze churn patterns and build predictive insights.
 
----
+
 
 ## Architecture
 The pipeline consists of the following components:
@@ -23,7 +23,7 @@ The pipeline consists of the following components:
 6. **Cron Jobs** – Pipeline automation
 7. **Amazon SNS** – Monitoring and notifications
 
----
+
 
 ## Data Pipeline Steps
 
@@ -46,20 +46,20 @@ The pipeline consists of the following components:
 - Power BI used to create churn analysis dashboards
 - Note: Power BI Desktop does not support scheduled refresh
 
----
+
 
 ## Automation
 - A cron job triggers the ETL pipeline automatically
 - SNS sends notifications on pipeline success or failure
 
----
+
 
 ## Ethical Considerations
 - Sensitive personal identifiers were excluded from analysis
 - Dataset bias was acknowledged due to demographic imbalance
 - Data used strictly for academic purposes
 
----
+
 
 ## Folder Structure
 - `scripts/` – PySpark ETL and automation scripts
@@ -68,7 +68,7 @@ The pipeline consists of the following components:
 - `visualization/` – Power BI dashboard
 - `architecture/` – System architecture diagram
 
----
+
 
 ## How to Run
 ```bash
